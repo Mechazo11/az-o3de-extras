@@ -12,11 +12,12 @@ if(NOT PAL_TRAIT_BUILD_ROS2_GEM_SUPPORTED)
 endif()
 
 # If no ROS2 is found, no targets are valid for this Gem
-find_package(ROS2 MODULE)
-if (NOT ROS2_FOUND)
-    message(FATAL_ERROR "Unable to detect a the ROS2 distribution on this system. Make sure it is installed and enabled.")
-    return()
-endif()
+# find_package(ROS2 MODULE)
+# if (NOT ROS2_FOUND)
+#     message(FATAL_ERROR "Unable to detect a the ROS2 distribution on this system. Make sure it is installed and enabled.")
+#     return()
+# endif()
+
 message(DEBUG "Building ${gem_name} Gem with ros2 $ENV{ROS_DISTRO}")
 
 # Check if ROS 2 distribution is cached
